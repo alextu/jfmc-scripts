@@ -23,6 +23,7 @@ propertySets {
       defaultValue "General"
       value "Limited"
       value "Rollback"
+      value "Undefined"
     }
     multiSelect('Browser support') {
       defaultValue "Chrome"
