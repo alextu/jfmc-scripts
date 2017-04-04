@@ -29,6 +29,7 @@ propertySets {
       defaultValue "Chrome"
       defaultValue "Firefox"
       value "Internet Explorer 5"
+      value "Internet Explorer 7"
     }
     anyValue('Quality Comments') {
       defaultValue "Fail"
