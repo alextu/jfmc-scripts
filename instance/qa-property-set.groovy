@@ -1,4 +1,4 @@
-artifactory("artifactory-name") {
+artifactory("Local") {
   proxies {
     proxy('source-item-name') {
       host 'master'
@@ -144,41 +144,5 @@ artifactory("artifactory-name") {
     excludesPattern "" // default
     repoLayoutRef "maven-2-default"
     repositories(["local-rep1", "local-rep2"])
-  }
-}
-
-xray("xray-name") {
-  watch('watch') {
-    binaryManagerId 'binaryManagerId'
-    targetType 'repository'
-    description 'description'
-    active true
-    postActions {
-      emails(['email1@email.com', 'email2@email.com'])
-      slacks 'slacks'
-      webhooks(['webhook1', 'webhook2'])
-      failBuild true
-    }
-    filters {
-      filter {
-        type 'license_black'
-        value 'value1'
-      }
-      filter {
-        type 'regex'
-        value 'value1'
-      }
-    }
-    repoType 'repoType'
-    severity 'severity'
-    system true
-    targetName 'targetName'
-    temp true
-  }
-
-  binaryManager('artifactory-name') {
-    url 'http://artifactory.com/artifactory'
-    login 'login'
-    password 'password'
   }
 }
